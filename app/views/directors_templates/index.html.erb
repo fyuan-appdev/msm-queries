@@ -1,7 +1,26 @@
 <h1>List of all directors</h1>
 
-<%= Director.all.each do |abc| %>
-  <li>
-  <%= abc.name %>
-  </li>
+<hr>
+
+<table border="1">
+  <tr>
+  <th>ID</th>
+  <th>Image</th>
+  <th>Name</th>
+  <th>Dob</th>
+  <th></th>
+<% Director.all.each do |abc| %>
+  <tr>
+  <td><%= abc.id %></td>
+  <td><img src="https://robohash.org/<%= abc.image%>jpg" style="width:250px;"> </td>
+  <td><%= abc.name %></td>
+  <td><%= abc.dob %></td>
+  <td>
+    <a href="/directors/<%= abc.id%>"> 
+    Show details
+    </a>
+  </td>
+  </tr>
 <% end %>
+</table>
+</form>
