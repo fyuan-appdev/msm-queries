@@ -1,0 +1,54 @@
+<h1>Director #<%=@director_id%> details</h1>
+
+  <a href="/directors/"> 
+  Go back
+  </a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%=@director_name%>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%=@director_dob%>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%=@director_bio%>
+
+Description above from the Wikipedia article Frank Capra, licensed under CC-BY-SA, full list of contributors on Wikipedia
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://robohash.org/<%= @director_image%>jpg" style="width:250px;">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    over 7 years ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    over 7 years ago
+  </dd>
+</dl>
+</form>
