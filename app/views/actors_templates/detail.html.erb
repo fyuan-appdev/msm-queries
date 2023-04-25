@@ -1,6 +1,6 @@
-<h1>Director #<%=@director_id%> details</h1>
+<h1>Actor #<%=@actor_id%> details</h1>
 
-  <a href="/directors/"> 
+  <a href="/actors/"> 
   Go back
   </a>
 
@@ -11,21 +11,21 @@
     Name
   </dt>
   <dd>
-    <%=@director_name%>
+    <%=@actor_name%>
   </dd>
 
   <dt>
     Dob
   </dt>
   <dd>
-    <%=@director_dob%>
+    <%=@actor_dob%>
   </dd>
 
   <dt>
     Bio
   </dt>
   <dd>
-    <%=@director_bio%>
+    <%=@actor_bio%>
 
 Description above from the Wikipedia article Frank Capra, licensed under CC-BY-SA, full list of contributors on Wikipedia
   </dd>
@@ -34,7 +34,7 @@ Description above from the Wikipedia article Frank Capra, licensed under CC-BY-S
     Image
   </dt>
   <dd>
-    <img src="https://robohash.org/<%= @director_image%>jpg" style="width:250px;">
+    <img src="https://robohash.org/<%= @actor_image%>jpg" style="width:250px;">
   </dd>
 
   <dt>
@@ -54,15 +54,14 @@ Description above from the Wikipedia article Frank Capra, licensed under CC-BY-S
 </form>
 
 <hr>
+<h1>Filmography</h1>
 
 <table border="1">
   <tr>
-  <th>ID</th>
-  <th>Image</th>
-  <th>Tile</th>
+  <th>Title</th>
   <th>Year</th>
   <th>Director</th>
+  <th>Character name</th>
   <th></th>
 
 </form>
-<h1>Filmography</h1>
