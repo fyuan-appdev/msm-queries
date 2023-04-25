@@ -27,6 +27,10 @@ class DirectorsController < ApplicationController
     current_year = Time.now.strftime("%Y").to_i
     @year_created = current_year - director_created
     @year_updated = current_year - director_updated
+
+    @movies = Movie.where({:director_id => @director_id})
+
     render({ :template =>"directors_templates/detail.html.erb"})
   end
+
 end

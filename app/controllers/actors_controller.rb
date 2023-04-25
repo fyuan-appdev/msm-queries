@@ -17,6 +17,9 @@ class ActorsController < ApplicationController
     current_year = Time.now.strftime("%Y").to_i
     @year_created = current_year - actor_created
     @year_updated = current_year - actor_updated
+
+    @characters = Character.where({:actor_id =>@actor_id})
+
     render({ :template =>"actors_templates/detail.html.erb"})
   end
 end

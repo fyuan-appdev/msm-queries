@@ -64,4 +64,22 @@ Description above from the Wikipedia article Frank Capra, licensed under CC-BY-S
   <th>Character name</th>
   <th></th>
 
+  <% @characters.all.each do |abc| %>
+    <tr>
+    <% movie_id = abc.movie_id %>
+    <% director_id = Movie.where({:id =>movie_id}).at(0).director_id %>
+    <td><%= Movie.where({:id =>movie_id}).at(0).title %></td>
+    <td><%= Movie.where({:id =>movie_id}).at(0).year %></td>
+    <td><%= Director.where({:id =>director_id}).at(0).name %></td>
+    <td><%= abc.name %></td>
+    <td>
+      <a href="/movies/<%= abc.movie_id%>"> 
+      Show details
+      </a>
+    </td>
+    </tr>
+  <% end %>
+
+  </tr>
+</table>
 </form>

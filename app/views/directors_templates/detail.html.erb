@@ -54,6 +54,7 @@ Description above from the Wikipedia article Frank Capra, licensed under CC-BY-S
 </form>
 
 <hr>
+<h2>Filmography</h2>
 
 <table border="1">
   <tr>
@@ -63,6 +64,21 @@ Description above from the Wikipedia article Frank Capra, licensed under CC-BY-S
   <th>Year</th>
   <th>Director</th>
   <th></th>
-
+  
+  <% @movies.all.each do |abc| %>
+    <tr>
+    <td><%= abc.id %></td>
+    <td><img src="https://robohash.org/<%= abc.image%>jpg" style="width:250px;"> </td>
+    <td><%= abc.title %></td>
+    <td><%= abc.year %></td>
+    <td><%= @director_name %></td>
+    <td>
+      <a href="/movies/<%= abc.id%>"> 
+      Show details
+      </a>
+    </td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
 </form>
-<h1>Filmography</h1>
